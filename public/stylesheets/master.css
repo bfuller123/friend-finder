@@ -50,6 +50,10 @@ form > .block-right {
   margin-bottom: 5%;
 }
 
+#user-name, #user-image {
+  width: 110%;
+}
+
 #submit {
   display: block;
   clear: both;
