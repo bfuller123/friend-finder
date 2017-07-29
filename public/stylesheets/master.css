@@ -1,0 +1,27 @@
+header {
+  background-color: gray;
+  font: 200% Arial, Helvetica, sans-serif;
+  color: white;
+  height: 300px;
+  margin: 0 10%;
+  padding: 1% 5%;
+}
+
+.brand {
+  position: relative;
+  bottom: 80%;
+  right: 5%;
+  float: right;
+  font-size: 300%;
+}
+
+#bold-F, #regular-F {
+  position: absolute;
+}
+
+#regular-F {
+  color: red;
+  left: 10px;
+  top: 5px;
+  opacity: .5;
+}
