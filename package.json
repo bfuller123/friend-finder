@@ -1,0 +1,24 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Full stack web application utilizing Express and Node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfuller123/friend-finder.git"
+  },
+  "author": "Brett Fuller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bfuller123/friend-finder/issues"
+  },
+  "homepage": "https://github.com/bfuller123/friend-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
