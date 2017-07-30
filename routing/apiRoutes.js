@@ -49,16 +49,14 @@ function determineScore(scoresArray) {
 }
 
 function determineBestMatch(array, userScore) {
-  console.log(userScore);
+  debugger;
   var bestMatch = {
     name: null,
     picture: null,
     compatibility: 5000
   };
   for(let i = 0; i < array.length; i++){
-    console.log(array[i].scores);
     var score = determineScore(array[i].scores);
-    console.log(score);
     var compatibility = Math.abs(userScore - score);
     if(bestMatch.compatibility > compatibility){
       bestMatch.name = array[i].name;
@@ -74,7 +72,6 @@ function fillInResults(person) {
   $('.results > h1').text('Your Lab Partner Is...')
   $('#best-match-name').text(person["name"]);
   $('#best-match-picture').attr('src', person["picture"]);
-  $('#best-match-compatibility').text(`Compatibility score of ${person["compatibility"]}`)
 }
 
 
