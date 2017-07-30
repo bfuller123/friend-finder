@@ -3,8 +3,16 @@ header {
   font: 200% Arial, Helvetica, sans-serif;
   color: white;
   height: 300px;
-  margin: 0 10%;
+  margin: 0 10% 3% 10%;
   padding: 1% 5%;
+}
+
+.title > h1 {
+  letter-spacing: 15px;
+}
+
+.title > h4 {
+  letter-spacing: 5px;
 }
 
 .brand {
@@ -58,10 +66,25 @@ form > .block-right {
   width: 110%;
 }
 
-#submit-btn {
+a {
+  text-decoration: none;
+}
+
+.button {
   display: block;
   clear: both;
-  padding: 2% 20%;
-  background-color: lightblue;
+  padding: 2% 10%;
   margin-left: 25%;
+  border: 5px solid lightblue;
+  background-color: white;
+  border-radius: 50px;
+  letter-spacing: 10px;
+  font-size: 200%;
+  color: lightblue;
+  transition: 1s;
+}
+
+.button:hover {
+  color: white;
+  background-color: lightblue;
 }
