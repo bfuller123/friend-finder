@@ -26,12 +26,16 @@ header {
   opacity: .5;
 }
 
-form {
+form, .results {
   border: 3px solid black;
   padding: 2% 5%;
   margin-left: 27%;
   width: 35%;
   text-align: center;
+}
+
+.results {
+  visibility: hidden;
 }
 
 form::after{
@@ -54,7 +58,7 @@ form > .block-right {
   width: 110%;
 }
 
-#submit {
+#submit-btn {
   display: block;
   clear: both;
   padding: 2% 20%;

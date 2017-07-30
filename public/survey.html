@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/master.css">
+  <title>LPF - Survey</title>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>Lab Partner Finder</h1>
+      <h4>Find Your Partner, Fast!</h4>
+    </div>
+    <div class="brand">
+      <h1 id="bold-F">LP</h1>
+      <h1 id="regular-F">F</h1>
+    </div>
+  </header>
+
+  <div class="results">
+    <h1></h1>
+    <h2 id='best-match-name'></h1>
+    <img src="" alt="" id='best-match-picture'>
+    <h4 id='best-match-compatibility'></h2>
+  </div>
+
+  <form class="survey" method="post">
+    <h2>The Survey</h2>
+    <div class="block-left">
+      <input type="text" placeholder="Your Name" id="user-name">
+      <div>
+        <p>You enjoy reading</p>
+        <select name="reading" class="question-one">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy dogs</p>
+        <select name="dogs" class="question-two">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy television</p>
+        <select name="television" class="question-three">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy eating out</p>
+        <select name="dining" class="question-four">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy shopping</p>
+        <select name="shopping" class="question-five">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+    </div>
+    <div class="block-right">
+      <input type="url" placeholder="Link to Your Picture" id="user-image">
+      <div>
+        <p>You enjoy cooking</p>
+        <select name="cooking" class="question-six">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy learning new things</p>
+        <select name="learning" class="question-seven">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy road trips</p>
+        <select name="travel" class="question-eight">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy cats</p>
+        <select name="cats" class="question-nine">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+      <div>
+        <p>You enjoy movies</p>
+        <select name="movies" class="question-ten">
+          <option value="1">1 - Not at All</option>
+          <option value="2">2</option>
+          <option value="3">3 - Somewhat</option>
+          <option value="4">4</option>
+          <option value="5">5 - A Lot!</option>
+        </select>
+      </div>
+    </div>
+    <button id="submit-btn">Submit</button>
+  </form>
+</body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/friends.js" charset="utf-8"></script>
+<script src="/apiRoutes.js" charset="utf-8"></script>
+</html>
