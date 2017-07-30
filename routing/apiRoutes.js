@@ -9,10 +9,7 @@ function apiPost() {
       picture: $("#user-image").val().trim(),
       scores: userResponses
     };
-    var userScore = determineScore(user.scores);
-    console.log(user);
-    console.log(`User score ${userScore}`);
-    var bestMatch = determineBestMatch(friends, userScore);
+    var bestMatch = determineBestMatch(friends, user.scores);
     fillInResults(bestMatch);
 
     $.post("/api/friends", user)
@@ -48,16 +45,33 @@ function determineScore(scoresArray) {
   return total;
 }
 
-function determineBestMatch(array, userScore) {
-  debugger;
+function compareArrays(array1, array2) {
+  var comparedArray = [];
+  for (var i = 0; i < array1.length; i++) {
+    var comparison = Math.abs(parseInt(array1[i]) - parseInt(array2[i]));
+    if (comparison == 4) {
+      comparison = comparison * 1.5;
+    }
+    else if(comparison == 3 || comparison == 2) {
+      comparison = comparison * 1.25;
+    }
+    else if(comparison === 0){
+      comparison = -8;
+    }
+    comparedArray.push(comparison);
+  }
+  return comparedArray;
+}
+
+function determineBestMatch(array, userArray) {
   var bestMatch = {
     name: null,
     picture: null,
     compatibility: 5000
   };
   for(let i = 0; i < array.length; i++){
-    var score = determineScore(array[i].scores);
-    var compatibility = Math.abs(userScore - score);
+    var compArray = compareArrays(userArray, array[i].scores);
+    var compatibility = determineScore(compArray);
     if(bestMatch.compatibility > compatibility){
       bestMatch.name = array[i].name;
       bestMatch.picture = array[i].picture;
