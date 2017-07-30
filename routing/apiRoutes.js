@@ -1,5 +1,5 @@
-function apiGet() {
-
+function apiGet(array) {
+// need to get the data from the array that is passed in, then print out each object's name, picture to the page
 }
 
 function apiPost() {
